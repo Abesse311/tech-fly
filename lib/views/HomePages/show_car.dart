@@ -20,7 +20,7 @@ class Show_car extends StatelessWidget {
             clipBehavior: Clip.none,
             children: [
               Image.asset(
-                "img/RsLine.jpg",
+                "img/RS7.jpg",
                 width: double.infinity,
                 height: 250,
                 fit: BoxFit.cover,
@@ -59,7 +59,7 @@ class Show_car extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "RS Line",
+                            "Audi RS7",
                             style: Theme.of(context).textTheme.headlineMedium,
                           ),
                           Row(
