@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/core/custom_widejts/car_card.dart';
-import 'package:flutter_application_1/core/custom_widejts/filters.dart';
+import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/car_card.dart';
+import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/filters.dart';
 import 'package:flutter_application_1/core/theme/app_color.dart';
 
 class Homepage extends StatelessWidget {

@@ -70,21 +70,22 @@ class AppTheme {
 
         bodyLarge: TextStyle(
           fontFamily: 'roboto',
-          fontSize: 16,
-          color: textSecondary,
+          fontSize: 18,
+          fontWeight: FontWeight.w600,
+          color: textPrimary,
         ),
 
         bodyMedium: TextStyle(
           fontFamily: 'roboto',
           fontSize: 14,
-          color: textSecondary,
+          color: primary,
         ),
         
         labelLarge: TextStyle(
           fontFamily: 'Exo2',
           fontSize: 14,
           fontWeight: FontWeight.w500,
-          color: primary,
+          color: textSecondary,
         ),
       ),
 
