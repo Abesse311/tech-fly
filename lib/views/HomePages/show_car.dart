@@ -186,138 +186,138 @@ class Show_car extends StatelessWidget {
                         style: Theme.of(context).textTheme.bodyLarge,
                       ),
 
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      //   children: [
-                      //     Text(
-                      //       "Full name",
-                      //       style: Theme.of(context).textTheme.labelLarge,
-                      //     ),
-                      //     Text(
-                      //       "Audi RS7 Sportback",
-                      //       style: Theme.of(context).textTheme.labelLarge
-                      //           ?.copyWith(color: Color(0xFF000000)),
-                      //     ),
-                      //   ],
-                      // ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Full name",
+                            style: Theme.of(context).textTheme.labelLarge,
+                          ),
+                          Text(
+                            "Audi RS7 Sportback",
+                            style: Theme.of(context).textTheme.labelLarge
+                                ?.copyWith(color: Color(0xFF000000)),
+                          ),
+                        ],
+                      ),
 
-                      // ////////////////// three boxes
-                      // SeriesBoxes(
-                      //   serires: "Audi RS",
-                      //   model: "RS C8",
-                      //   generation: "Latest",
-                      // ),
+                      ////////////////// three boxes
+                      SeriesBoxes(
+                        serires: "Audi RS",
+                        model: "RS C8",
+                        generation: "Latest",
+                      ),
 
-                      // ////////////////////
-                      // Divider(thickness: 2.5, color: Color(0xFFEEEEEE)),
-                      // SizedBox(height: 6),
+                      ////////////////////
+                      Divider(thickness: 2.5, color: Color(0xFFEEEEEE)),
+                      SizedBox(height: 6),
 
-                      // Text(
-                      //   "Car Information",
-                      //   style: Theme.of(context).textTheme.bodyLarge,
-                      // ),
+                      Text(
+                        "Car Information",
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
 
-                      // /////////////////// box of information
-                      // CarInformationBox(
-                      //   register_number: 5434511231,
-                      //   year: 2012,
-                      //   color: Colors.grey,
-                      //   categorie: "SUV",
-                      // ),
+                      /////////////////// box of information
+                      CarInformationBox(
+                        register_number: 5434511231,
+                        year: 2012,
+                        color: Colors.grey,
+                        categorie: "SUV",
+                      ),
 
-                      // //////////////////
-                      // SizedBox(height: 6),
-                      // Divider(thickness: 2.5, color: Color(0xFFEEEEEE)),
-                      // SizedBox(height: 6),
+                      //////////////////
+                      SizedBox(height: 6),
+                      Divider(thickness: 2.5, color: Color(0xFFEEEEEE)),
+                      SizedBox(height: 6),
 
-                      // Text(
-                      //   "Pricing",
-                      //   style: Theme.of(context).textTheme.bodyLarge,
-                      // ),
-                      // SizedBox(height: 6),
+                      Text(
+                        "Pricing",
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
+                      SizedBox(height: 6),
 
-                      // RichText(
-                      //   text: TextSpan(
-                      //     text:
-                      //         "Pricing is based on duration and distance. Each rental duration (e.g., 1-3 days) has a base price (e.g., 5000 DA), with additional charges for extended distances\n(e.g., 10 DA/km for 10-20 km)",
-                      //     style: Theme.of(
-                      //       context,
-                      //     ).textTheme.labelLarge?.copyWith(fontSize: 15),
-                      //   ),
-                      // ),
+                      RichText(
+                        text: TextSpan(
+                          text:
+                              "Pricing is based on duration and distance. Each rental duration (e.g., 1-3 days) has a base price (e.g., 5000 DA), with additional charges for extended distances\n(e.g., 10 DA/km for 10-20 km)",
+                          style: Theme.of(
+                            context,
+                          ).textTheme.labelLarge?.copyWith(fontSize: 15),
+                        ),
+                      ),
 
-                      // SizedBox(height: 10),
+                      SizedBox(height: 10),
 
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      //   children: [
-                      //     Obx(
-                      //       () => Container(
-                      //         padding: EdgeInsets.symmetric(horizontal: 12),
-                      //         decoration: BoxDecoration(
-                      //           color: Colors.blue, // background color
-                      //           borderRadius: BorderRadius.circular(
-                      //             15,
-                      //           ), // rounded corners
-                      //         ),
-                      //         child: DropdownButton<String>(
-                      //           value: controller.selectedDuration.value,
-                      //           iconEnabledColor: Colors.white,
-                      //           dropdownColor:
-                      //               Colors.blue, // dropdown menu color (optional)
-                      //           underline:
-                      //               SizedBox(), // removes the default underline
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Obx(
+                            () => Container(
+                              padding: EdgeInsets.symmetric(horizontal: 12),
+                              decoration: BoxDecoration(
+                                color: Colors.blue, // background color
+                                borderRadius: BorderRadius.circular(
+                                  15,
+                                ), // rounded corners
+                              ),
+                              child: DropdownButton<String>(
+                                value: controller.selectedDuration.value,
+                                iconEnabledColor: Colors.white,
+                                dropdownColor:
+                                    Colors.blue, // dropdown menu color (optional)
+                                underline:
+                                    SizedBox(), // removes the default underline
                           
-                      //           hint: Text(
-                      //             "Choose duration",
-                      //             style: TextStyle(color: Colors.white),
-                      //           ),
+                                hint: Text(
+                                  "Choose duration",
+                                  style: TextStyle(color: Colors.white),
+                                ),
                           
-                      //           style: TextStyle(
-                      //             color: Colors.white,
-                      //           ), // selected text color
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ), // selected text color
                           
-                      //           items: [
-                      //             DropdownMenuItem(
-                      //               value: "1-3 days",
-                      //               child: Text("1-3 days"),
-                      //             ),
-                      //             DropdownMenuItem(
-                      //               value: "3-7 days",
-                      //               child: Text("3-7 days"),
-                      //             ),
-                      //             DropdownMenuItem(
-                      //               value: "7+ days",
-                      //               child: Text("7+ days"),
-                      //             ),
-                      //           ],
+                                items: [
+                                  DropdownMenuItem(
+                                    value: "1-3 days",
+                                    child: Text("1-3 days"),
+                                  ),
+                                  DropdownMenuItem(
+                                    value: "3-7 days",
+                                    child: Text("3-7 days"),
+                                  ),
+                                  DropdownMenuItem(
+                                    value: "7+ days",
+                                    child: Text("7+ days"),
+                                  ),
+                                ],
                           
-                      //           onChanged: (value) {
-                      //             controller.updateDuration(value);
-                      //           },
-                      //         ),
-                      //       ),
-                      //     ),
-                      //     Text("4000 DA/jour",style: TextStyle(fontSize: 18),)
-                      //   ],
-                      // ),
+                                onChanged: (value) {
+                                  controller.updateDuration(value);
+                                },
+                              ),
+                            ),
+                          ),
+                          Text("4000 DA/jour",style: TextStyle(fontSize: 18),)
+                        ],
+                      ),
 
-                      // SizedBox(height: 8,),
+                      SizedBox(height: 8,),
 
-                      // /////////////// pricing box
+                      /////////////// pricing box
                       
-                      // PricingBox(),
+                      PricingBox(),
 
-                      // //////////////////////////
+                      //////////////////////////
                       
 
-                      // Padding(
-                      //   padding: const EdgeInsets.symmetric(vertical: 15.0),
-                      //   child: ElevatedButton(
-                      //     onPressed: () {},
-                      //     child: Text("Book now"),
-                      //   ),
-                      // ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 15.0),
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text("Book now"),
+                        ),
+                      ),
                     ],
                   ),
                 ),
