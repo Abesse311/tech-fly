@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart'; 
 
 class Filters extends StatelessWidget {
-  final String filter ;
+  final String filter ; 
+  final VoidCallback? onPressed ;
 
-  Filters ({required this.filter});
+  Filters ({required this.filter, this.onPressed});
 
 
 
@@ -15,7 +16,7 @@ class Filters extends StatelessWidget {
         style: ButtonStyle(
           
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Row(
           children: [
             Text(filter,style: Theme.of(context).textTheme.labelLarge?.copyWith(color: Colors.white),), 

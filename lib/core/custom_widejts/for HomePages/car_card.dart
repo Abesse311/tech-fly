@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/views/HomePages/show_car.dart';
+import 'package:get/get.dart';
+
 
 class CarCard extends StatelessWidget {
   String img_path;
@@ -26,7 +29,7 @@ class CarCard extends StatelessWidget {
         ),
         height: 260,
         width: double.infinity,
-
+    
         child: Padding(
           padding: const EdgeInsets.only(top: 3.0),
           child: Column(

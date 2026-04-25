@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/RoutePage.dart';
 import 'package:flutter_application_1/controllers/dropbutton.dart';
 import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/booking_info/Caracteristique_car.dart';
 import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/booking_info/car_information_box.dart';
 import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/booking_info/pricing_box.dart';
 import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/booking_info/series_boxes.dart';
+import 'package:flutter_application_1/views/HomePages/homePage.dart';
 import 'package:get/get.dart';
 
 class Show_car extends StatelessWidget {
@@ -43,6 +45,13 @@ class Show_car extends StatelessWidget {
                   child: Center(child: Image.asset("icons/logo.png")),
                 ),
               ),
+              Positioned(
+                left: 4,
+                child: SafeArea(
+                  child: IconButton(onPressed: (){Get.offAll(MyWidget());}, 
+                  icon: Icon(Icons.arrow_back_ios_new_sharp,color: Colors.white,))
+                  )
+                )
             ],
           ),
           Expanded(
@@ -158,15 +167,16 @@ class Show_car extends StatelessWidget {
                       SizedBox(height: 8),
 
                       ///////////////////////////// gridview ??? / custom widjet
-                      Caracteristique_Car(
-                        "icons/audi.png",
-                        "Audi",
-                        "Disel",
-                        "Manaul",
-                        "Audi RS7",
-                        5,
+                      Caracteristique_Car(logo_path: "icons/audi.png", model: "RS", brand: "audi", energy: "Disle", gearbox: "Auto", seats: 5, weel: 4.5),
+                      // Caracteristique_Car(
+                      //   "icons/audi.png",
+                      //   "Audi",
+                      //   "Disel",
+                      //   "Manaul",
+                      //   "Audi RS7",
+                      //   5,
                         
-                      ),
+                      // ),
 
                       ////////////////////////////////
                       Divider(thickness: 2.5, color: Color(0xFFEEEEEE)),

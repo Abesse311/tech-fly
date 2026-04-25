@@ -40,15 +40,15 @@ class AppTheme {
 
       // 📱 AppBar
       appBarTheme: const AppBarTheme(
-        backgroundColor: Colors.transparent,
+        backgroundColor: primary,
         elevation: 0,
         foregroundColor: Colors.white,
         centerTitle: true,
         titleTextStyle: TextStyle(
-          fontFamily: 'Orbitron',
+          fontFamily: 'roboto',
           fontSize: 20,
           fontWeight: FontWeight.bold,
-          color: Colors.white,
+          color: textPrimary,
         ),
       ),
 

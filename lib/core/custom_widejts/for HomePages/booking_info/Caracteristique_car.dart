@@ -4,7 +4,23 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 
 class Caracteristique_Car extends StatelessWidget {
-  const Caracteristique_Car({super.key});
+  final String logo_path ;
+  final String brand ;
+  final String model ;
+  final String gearbox ;
+  final String energy ;
+  final double weel ;
+  final int seats ;
+
+  Caracteristique_Car({
+    required this. logo_path,
+    required this.model ,
+    required this.brand ,
+    required this.energy ,
+    required this.gearbox ,
+    required this.seats ,
+    required this.weel ,
+  }) ;
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +40,8 @@ class Caracteristique_Car extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset(car.logo_path,height: 40,width: 40,),
-                      Text(car.logo_path,style: Theme.of(context).textTheme.labelLarge,)
+                      Image.asset(logo_path,height: 40,width: 40,),
+                      Text(brand,style: Theme.of(context).textTheme.labelLarge,)
                     ],
                   ),
                 )),
@@ -41,7 +57,7 @@ class Caracteristique_Car extends StatelessWidget {
                     children: [
                       SvgPicture.asset("icons/fuel.svg",height: 30),
                       SizedBox(height: 5,),
-                      Text(car.energy,style: Theme.of(context).textTheme.labelLarge,)
+                      Text(energy,style: Theme.of(context).textTheme.labelLarge,)
                     ],
                   ),
                 )),
@@ -57,7 +73,7 @@ class Caracteristique_Car extends StatelessWidget {
                     children: [
                       SvgPicture.asset("icons/gearbox.svg",height: 30),
                       SizedBox(height: 5,),
-                      Text(car.gearbox,style: Theme.of(context).textTheme.labelLarge,)
+                      Text(gearbox,style: Theme.of(context).textTheme.labelLarge,)
                     ],
                   ),
                 )),
@@ -76,7 +92,7 @@ class Caracteristique_Car extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SvgPicture.asset("icons/smallcar.svg",height: 40,width: 40,),
-                      Text(car.model,style: Theme.of(context).textTheme.labelLarge,)
+                      Text(model,style: Theme.of(context).textTheme.labelLarge,)
                     ],
                   ),
                 )),
@@ -92,7 +108,7 @@ class Caracteristique_Car extends StatelessWidget {
                     children: [
                       SvgPicture.asset("icons/seatcar.svg",height: 25,width: 30,),
                       SizedBox(height: 5,),
-                      Text("${car.seats.toString()} seats",style: Theme.of(context).textTheme.labelLarge,)
+                      Text("${seats.toString()} seats",style: Theme.of(context).textTheme.labelLarge,)
                     ],
                   ),
                 )),
@@ -108,7 +124,7 @@ class Caracteristique_Car extends StatelessWidget {
                     children: [
                       SvgPicture.asset("icons/steering.svg",height: 35,width: 20,),
                       SizedBox(height: 2,),
-                      Text("${car.weel.toString()}T",style: Theme.of(context).textTheme.labelLarge,)
+                      Text("${weel.toString()}T",style: Theme.of(context).textTheme.labelLarge,)
                     ],
                   ),
                 )),
