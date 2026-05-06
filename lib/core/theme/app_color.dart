@@ -128,17 +128,18 @@ class AppTheme {
           vertical: 5,
         ),
         border: OutlineInputBorder(
+        
           borderRadius: BorderRadius.circular(30),
           borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30),
-          borderSide: BorderSide.none,
+          borderRadius: BorderRadius.circular(25),
+          borderSide: BorderSide(color: primary),
         ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30),
-          borderSide: const BorderSide(color: primary, width: 2),
-        ),
+        // focusedBorder: OutlineInputBorder(
+        //   borderRadius: BorderRadius.circular(30),
+        //   borderSide: const BorderSide(color: primary, width: 2),
+        // ),
       ),
 
 

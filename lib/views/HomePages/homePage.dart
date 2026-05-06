@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/Filtres_Sheet/Date.dart';
+import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/Filtres_Sheet/FuelTypes.dart';
+import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/Filtres_Sheet/StatesSheet.dart';
+import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/Filtres_Sheet/brands.dart';
 import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/car_card.dart';
 import 'package:flutter_application_1/core/custom_widejts/for%20HomePages/filters.dart';
 import 'package:flutter_application_1/core/theme/app_color.dart';
@@ -78,25 +82,23 @@ class Homepage extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      Filters(filter: "State"),
-                      Filters(filter: "select date"),
-                      Filters(filter: "Fuel"),
-                      Filters(filter: "Transmission"),
-                      Filters(filter: "Tags"),
-                      Filters(filter: "catigories"),
-                      Filters(filter: "Brands"),
-                      Filters(filter: "Test",onPressed:() {
-                        Get.to(() => Show_car());
-                      },)
+                      Filters(filter: "State",onPressed: () {Get.bottomSheet(Statessheet());},),
+                      Filters(filter: "select date",onPressed: () {Get.to(Date());}),
+                      Filters(filter: "Fuel",onPressed: () {Get.bottomSheet(Fueltypes());}),
+                      Filters(filter: "Transmission",onPressed: () {}),
+                      Filters(filter: "Tags",onPressed: () {}),
+                      Filters(filter: "catigories",onPressed: () {}),
+                      Filters(filter: "Brands",onPressed: () {Get.bottomSheet(Brands());}),
+                      Filters(filter: "ebeger")
                     ],
                   ),
                 ),
               ),
             ],
           ),
-          /////////////////////////////////////////////// SECOND PART 
+          /////////////////////////////////////////////// SECOND PART
           Padding(
-            padding: const EdgeInsets.only( top: 14),
+            padding: const EdgeInsets.only(top: 14),
             child: Container(
               height: 48,
               decoration: BoxDecoration(
@@ -150,30 +152,53 @@ class Homepage extends StatelessWidget {
             ),
           ),
 
-          SizedBox(height: 14,) ,
+          SizedBox(height: 14),
 
-          Expanded(child: Padding(
-            padding: const EdgeInsets.only(top: 0),
-            child: ListView(
-              padding: EdgeInsets.zero,
-              children: [
-                CarCard(img_path: "img/RsLine.jpg", car_model: "RS Line", car_address: "Béchar", rating: 5, car_price: 4000),
-                CarCard(img_path: "img/RS7.jpg", car_model: "Audi RS7", car_address: "Oran 31", rating: 5, car_price: 8000),
-                CarCard(img_path: "img/duster.jpg", car_model: "Duster", car_address: "Mostaganem", rating: 5, car_price: 3500),
-                CarCard(img_path: "img/gle.jpg", car_model: "Benz GLE", car_address: "Telemcen", rating: 5, car_price: 7000),
-                // Container(
-                //   height: 50,
-                //   width: double.infinity,
-                //   color: Colors.redAccent,
-                // )
-                
-              ],
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 0),
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: [
+                  CarCard(
+                    img_path: "img/RsLine.jpg",
+                    car_model: "RS Line",
+                    car_address: "Béchar",
+                    rating: 5,
+                    car_price: 4000,
+                  ),
+                  CarCard(
+                    img_path: "img/RS7.jpg",
+                    car_model: "Audi RS7",
+                    car_address: "Oran 31",
+                    rating: 5,
+                    car_price: 8000,
+                  ),
+                  CarCard(
+                    img_path: "img/duster.jpg",
+                    car_model: "Duster",
+                    car_address: "Mostaganem",
+                    rating: 5,
+                    car_price: 3500,
+                  ),
+                  CarCard(
+                    img_path: "img/gle.jpg",
+                    car_model: "Benz GLE",
+                    car_address: "Telemcen",
+                    rating: 5,
+                    car_price: 7000,
+                  ),
+
+                  // Container(
+                  //   height: 50,
+                  //   width: double.infinity,
+                  //   color: Colors.redAccent,
+                  // )
+                ],
+              ),
             ),
-          )
           ),
-          SizedBox(height: 100,)
-          
-          
+          SizedBox(height: 100),
         ],
       ),
     );

@@ -40,7 +40,7 @@ class Profile extends StatelessWidget {
                 Positioned(
                   bottom: 80,
                   child: CircleAvatar(
-                    backgroundImage: AssetImage("img/agency.jpg"),
+                    backgroundImage: AssetImage("img/user1.jpg"),
                     radius: 40,
                   ),
                 ),
